@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import PlayersList from "./component/Playerslist";
+import NavScrollExample from "./component/navBar";
+import BasicExample from "./component/form";
+import BrandExample from "./component/footer";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavScrollExample />
+      <div className="text-center pt-2">
+        <h2>Welcome To notRED.com</h2>
+        <h4>Home of passionate football lovers and gamblers</h4>
+        <hr></hr>
+      </div>
+      <h5 className="text-center pt-2">
+        Here a list of this weeks football players
+      </h5>
+      <PlayersList />
+      <BasicExample />
+      <BrandExample />
     </div>
   );
 }
